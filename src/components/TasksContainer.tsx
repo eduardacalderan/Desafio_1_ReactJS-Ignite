@@ -1,6 +1,8 @@
-import { useState } from "react";
-import { NewTask } from "./NewTask";
 import { Tasks } from "./Tasks";
+import { TasksInfos } from "./TasksInfos";
+import { HiOutlineClipboardList } from "react-icons/hi";
+
+import styles from "./TasksContainer.module.css";
 
 interface Task {
   id: string;
@@ -19,6 +21,11 @@ export function TasksContainer({ tasks, checkedTask, deleteTask }: TaskProps) {
 
   return (
     <>
+      <TasksInfos
+        task={tasks}
+        checkedTask={checkedTask}
+        deleteTask={deleteTask}
+      />
       {taskCreated ? (
         tasks.map((tasks) => (
           <Tasks
@@ -29,9 +36,13 @@ export function TasksContainer({ tasks, checkedTask, deleteTask }: TaskProps) {
           />
         ))
       ) : (
-        <div>
-          <strong>Você ainda não tem tarefas cadastradas</strong>
-          <p>Crie tarefas e organize seus itens a fazer</p>
+        <div className={styles.emptySchedule}>
+          <HiOutlineClipboardList />
+
+          <div className={styles.text}>
+            <strong>Você ainda não tem tarefas cadastradas</strong>
+            <p>Crie tarefas e organize seus itens a fazer</p>
+          </div>
         </div>
       )}
     </>

@@ -1,0 +1,19 @@
+.emptySchedule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 4rem;
+}
+
+.emptySchedule svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  color: var(--gray-400);
+
+  margin-bottom: 1rem;
+}
+
+.emptySchedule svg path {
+  stroke-width: 1;
+}

@@ -1,0 +1,24 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray-400);
+}
+
+.container p {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.container p.created {
+  color: var(--purple);
+}
+
+.container p span {
+  background-color: var(--gray-400);
+  color: var(--gray-200);
+  padding: 2px 8px;
+  border-radius: 999px;
+}

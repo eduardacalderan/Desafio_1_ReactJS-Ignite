@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { BsCheckCircle, BsCircle } from "react-icons/bs";
-import styles from "./Task.module.css";
+import styles from "./Tasks.module.css";
 
 interface Task {
   id: string;
@@ -31,7 +31,7 @@ export function Tasks(props: TaskProps) {
   return (
     <div
       className={`${styles.task} ${
-        props.task.checked ? styles.task_checked : styles.task_unchecked
+        props.task.checked ? styles.taskChecked : styles.task_unchecked
       }`}
     >
       <button onClick={handleCheckTask}>

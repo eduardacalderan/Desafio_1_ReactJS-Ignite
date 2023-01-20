@@ -1,3 +1,4 @@
+import styles from "./TasksInfos.module.css";
 interface Task {
   id: string;
   label: string;
@@ -21,14 +22,14 @@ export function TasksInfos(props: TaskProps) {
   }, 0);
 
   return (
-    <>
+    <div className={styles.container}>
       <p>
         Tarefas criadas <span>{taskCreated}</span>
       </p>
 
-      <p>
+      <p className={styles.created}>
         Concluídas <span>{taskCompleted}</span>
       </p>
-    </>
+    </div>
   );
 }

@@ -18,8 +18,9 @@
   border-color: var(--gray-400);
 }
 
-.task_checked {
+.taskChecked {
   border-color: var(--gray-500);
+  text-decoration: line-through;
 }
 
 .text_unchecked {

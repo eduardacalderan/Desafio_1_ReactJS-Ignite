@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  gap: 0.75rem;
+  padding: 4.5rem 0 3.3125rem 0;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+
+  color: var(--blue);
+}
+
+.logo span {
+  color: var(--purple-dark);
+}

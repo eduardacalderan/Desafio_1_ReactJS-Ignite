@@ -3,6 +3,7 @@ import { Header } from "./components/Header";
 import { TasksContainer } from "./components/TasksContainer";
 import { NewTask } from "./components/NewTask";
 
+import "./App.css";
 import "./global.css";
 
 interface Task {

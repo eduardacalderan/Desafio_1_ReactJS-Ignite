@@ -1,11 +1,13 @@
 import rocketIcon from "../assets/rocket.svg";
 
+import styles from "./Header.module.css";
+
 export function Header() {
   return (
-    <header>
+    <header className={styles.header}>
       <img src={rocketIcon} alt="Rocket" />
-      <p>
-        <span>to</span>
+      <p className={styles.logo}>
+        to
         <span>do</span>
       </p>
     </header>
