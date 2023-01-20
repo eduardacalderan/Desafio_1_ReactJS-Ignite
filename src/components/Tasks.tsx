@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { AiFillDelete } from "react-icons/ai";
-import { BsCheckCircle, BsCircle } from "react-icons/bs";
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { BsCheckCircleFill, BsCircle } from "react-icons/bs";
+
 import styles from "./Tasks.module.css";
 
 interface Task {
@@ -31,17 +32,21 @@ export function Tasks(props: TaskProps) {
   return (
     <div
       className={`${styles.task} ${
-        props.task.checked ? styles.taskChecked : styles.task_unchecked
+        props.task.checked ? styles.taskChecked : styles.taskUnchecked
       }`}
     >
-      <button onClick={handleCheckTask}>
-        {!check ? <BsCircle /> : <BsCheckCircle />}
+      <button className={styles.button} onClick={handleCheckTask}>
+        {!check ? (
+          <BsCircle className={styles.unchecked} />
+        ) : (
+          <BsCheckCircleFill className={styles.checked} />
+        )}
       </button>
 
       <p>{props.task.label}</p>
 
-      <button onClick={handleDeleteTask}>
-        <AiFillDelete />
+      <button className={styles.buttonDelete} onClick={handleDeleteTask}>
+        <RiDeleteBin6Line className={styles.delete} />
       </button>
     </div>
   );

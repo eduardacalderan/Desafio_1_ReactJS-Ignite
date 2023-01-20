@@ -28,7 +28,10 @@ export function TasksInfos(props: TaskProps) {
       </p>
 
       <p className={styles.created}>
-        Concluídas <span>{taskCompleted}</span>
+        Concluídas{" "}
+        <span>
+          {taskCompleted} de {taskCreated}
+        </span>
       </p>
     </div>
   );

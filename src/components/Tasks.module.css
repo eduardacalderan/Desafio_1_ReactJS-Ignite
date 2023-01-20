@@ -8,13 +8,56 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 0.75rem;
+
+  width: 100%;
 }
 
 .task + .task {
   margin-top: 1rem;
 }
 
-.task_unckecked {
+.button,
+.buttonDelete {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  font-size: 1.1rem;
+}
+
+.button svg {
+  margin-bottom: -0.3rem;
+}
+
+.unchecked,
+.checked {
+  transition: all 0.2s;
+}
+
+.unchecked {
+  color: var(--blue);
+}
+
+.unchecked:hover {
+  color: var(--blue-dark);
+}
+
+.checked {
+  color: var(--purple-dark);
+}
+
+.checked:hover {
+  color: var(--purple);
+}
+
+.task p {
+  color: var(--gray-100);
+  word-break: break-all;
+  font-size: var(--medium-size);
+}
+
+.taskUnckecked {
   border-color: var(--gray-400);
 }
 
@@ -23,104 +66,23 @@
   text-decoration: line-through;
 }
 
-.text_unchecked {
-  font-size: 0.875rem;
-  color: var(--gray-100);
-}
-
-.text_checked {
-  font-size: 0.875rem;
+.taskChecked p {
   color: var(--gray-300);
-  text-decoration: line-through;
-}
-
-.checkbox {
-  width: 1.5rem;
-  height: 1.5rem;
-  background: none;
-  border: none;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-}
-
-.checkbox svg {
-  width: 0.7rem;
-}
-
-.radio_unchecked {
-  background: none;
-
-  width: 1.125rem;
-  height: 1.125rem;
-
-  border: 2px solid var(--blue);
-  border-radius: 50%;
-
-  position: relative;
-}
-
-.radio_unchecked:before {
-  content: "";
-  background: var(--blue-dark);
-  opacity: 0.2;
-
-  display: none;
-  position: absolute;
-
-  width: 0.9rem;
-  height: 0.9rem;
-  border-radius: 50%;
-}
-
-.radio_unchecked:hover {
-  border-color: var(--blue-dark);
-}
-
-.radio_unchecked:hover::before {
-  display: block;
-}
-
-.radio_checked {
-  width: 1.125rem;
-  height: 1.125rem;
-  border-radius: 50%;
-
-  background: var(--purple-dark);
-
-  display: flex;
-  justify-content: center;
-}
-
-.radio_checked:hover {
-  background: var(--purple);
 }
 
 .delete {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-
-  padding: 0.3rem;
-
-  border-radius: 4px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.delete svg {
-  width: 0.875rem;
+  color: var(--gray-300);
 }
 
 .delete:hover {
-  background: var(--gray-400);
+  color: var(--danger);
 }
 
-.delete:hover svg path {
-  fill: var(--red);
+.buttonDelete {
+  padding: 0.4rem 0.4rem 0.1rem 0.4rem;
+}
+
+.buttonDelete:hover {
+  background-color: var(--gray-400);
+  border-radius: 4px;
 }

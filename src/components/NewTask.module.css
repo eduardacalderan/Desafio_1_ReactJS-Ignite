@@ -38,4 +38,16 @@
   gap: 0.5rem;
 
   width: 5.625rem;
+
+  cursor: pointer;
+
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background-color: var(--blue);
+}
+
+.button svg {
+  font-size: var(--large-size);
 }

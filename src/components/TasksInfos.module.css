@@ -4,12 +4,15 @@
   justify-content: space-between;
 
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--gray-400);
 }
 
 .container p {
   color: var(--blue);
   font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .container p.created {
